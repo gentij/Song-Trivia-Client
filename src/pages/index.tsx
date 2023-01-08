@@ -15,6 +15,7 @@ import Seo from '@/components/Seo';
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
 import Vercel from '~/svg/Vercel.svg';
+import SongPlayer from '@/components/SongPlayer';
 
 // !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
 // Before you begin editing, follow all comments with `STARTERCONF`,
@@ -28,6 +29,7 @@ export default function HomePage() {
 
       <main>
         <section className='bg-white'>
+          <SongPlayer />
           <div className='layout flex min-h-screen flex-col items-center justify-center text-center'>
             <Vercel className='text-5xl' />
             <h1 className='mt-4'>
