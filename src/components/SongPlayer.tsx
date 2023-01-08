@@ -5,7 +5,7 @@ export default function SongPlayer() {
   const [renderPlayer, setRenderPlayer] = useState(false);
 
   const token =
-    'BQAIxQQGkiARafZvEAva9ro5QPYMScoY9vUqP2Jtmvxl6RalDTr6lZInQDnUB_vAesPCXyh4Li2Nxd0QelYAfC7RFZ0DDol8v7h3Fh2aYfD6gdksqW6xqzDKRsnZoiLheriEMo5RzQRAtTCeYRfmLt1m4DmwoOr0Gg';
+    'BQAtnbCw4-9_gk0CvSVNIuJGOrok2iY8Xj248PQ7xAO2xgsfzf1XKM7EzioNbjFglapocugWvJHRFGtHAzlp6ja2mngmHe7FmobHaYHlN0h0oah2dItvY-x4rjWMO9dbXHu0fZTret1noGvlYugP4nnZFpVmzRXYEw';
   const uris = ['spotify:track:5BvGdjGZKbsrtfA05Yg23W'];
 
   useEffect(() => {
