@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 import Layout from '@/components/layout/Layout';
 import ArrowLink from '@/components/links/ArrowLink';
@@ -6,6 +7,7 @@ import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
+import SongPlayer from '@/components/SongPlayer';
 
 /**
  * SVGR Support
@@ -21,6 +23,8 @@ import Vercel from '~/svg/Vercel.svg';
 // to customize the default configuration.
 
 export default function HomePage() {
+  const client = new QueryClient();
+
   return (
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
@@ -28,6 +32,9 @@ export default function HomePage() {
 
       <main>
         <section className='bg-white'>
+          <QueryClientProvider client={client}>
+            <SongPlayer />
+          </QueryClientProvider>
           <div className='layout flex min-h-screen flex-col items-center justify-center text-center'>
             <Vercel className='text-5xl' />
             <h1 className='mt-4'>
