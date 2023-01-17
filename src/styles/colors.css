@@ -505,3 +505,58 @@
   --color-primary-800: rgb(var(--tw-color-primary-800)); /* #1e293b */
   --color-primary-900: rgb(var(--tw-color-primary-900)); /* #0f172a */
 }
+
+.app-violet {
+  --tw-color-primary-50: 159 87 115;
+  --tw-color-primary-100: 163 78 113;
+  --tw-color-primary-200: 166 69 110;
+  --tw-color-primary-300: 170 59 108;
+  --tw-color-primary-400: 173 47 106;
+  --tw-color-primary-500: 176 30 104;
+  --tw-color-primary-600: 155 0 86;
+  --tw-color-primary-700: 144 0 78;
+  --tw-color-primary-800: 134 0 70;
+  --tw-color-primary-900: 123 0 61;
+  --color-primary-50: rgb(var(--tw-color-primary-50)); /* #9f5773 */
+  --color-primary-100: rgb(var(--tw-color-primary-100)); /* #a34e71 */
+  --color-primary-200: rgb(var(--tw-color-primary-200)); /* #a6456e */
+  --color-primary-300: rgb(var(--tw-color-primary-300)); /* #aa3b6c */
+  --color-primary-400: rgb(var(--tw-color-primary-400)); /* #ad2f6a */
+  --color-primary-500: rgb(var(--tw-color-primary-500)); /* #B01E68 */
+  --color-primary-600: rgb(var(--tw-color-primary-600)); /* #9b0056 */
+  --color-primary-700: rgb(var(--tw-color-primary-700)); /* #90004e */
+  --color-primary-800: rgb(var(--tw-color-primary-800)); /* #860046 */
+  --color-primary-900: rgb(var(--tw-color-primary-900)); /* #7b003d */
+}
+
+.app-orange {
+  --tw-color-primary-50: 185 97 87;
+  --tw-color-primary-100: 193 90 80;
+  --tw-color-primary-200: 200 83 73;
+  --tw-color-primary-300: 207 75 66;
+  --tw-color-primary-400: 214 65 60;
+  --tw-color-primary-500: 220 53 53;
+  --tw-color-primary-600: 191 15 33;
+  --tw-color-primary-700: 177 0 23;
+  --tw-color-primary-800: 177 0 23;
+  --tw-color-primary-900: 149 0 2;
+  --color-primary-50: rgb(var(--tw-color-primary-50)); /* #b96157 */
+  --color-primary-100: rgb(var(--tw-color-primary-100)); /* #c15a50 */
+  --color-primary-200: rgb(var(--tw-color-primary-200)); /* #c85349 */
+  --color-primary-300: rgb(var(--tw-color-primary-300)); /* #cf4b42 */
+  --color-primary-400: rgb(var(--tw-color-primary-400)); /* #d6413c */
+  --color-primary-500: rgb(var(--tw-color-primary-500)); /* #DC3535 */
+  --color-primary-600: rgb(var(--tw-color-primary-600)); /* #bf0f21 */
+  --color-primary-700: rgb(var(--tw-color-primary-700)); /* #b10017 */
+  --color-primary-800: rgb(var(--tw-color-primary-800)); /* #b10017 */
+  --color-primary-900: rgb(var(--tw-color-primary-900)); /* #a3000e */
+}
+
+.app-yellow {
+  --tw-color-primary-light: #ffe15d;
+  --tw-color-primary-dark: 244, 157, 26, 0.7;
+  --tw-color-primary: #f49d1a;
+  --color-primary-50: var(--tw-color-primary-light);
+  --color-primary-100: rgb(var(--tw-color-primary-dark));
+  --color-primary-200: var(--tw-color-primary);
+}
