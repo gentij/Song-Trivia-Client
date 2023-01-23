@@ -1,3 +1,4 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
@@ -6,6 +7,7 @@ import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
+import SongPlayer from '@/components/SongPlayer';
 
 /**
  * SVGR Support
@@ -21,11 +23,14 @@ import Vercel from '~/svg/Vercel.svg';
 // to customize the default configuration.
 
 export default function HomePage() {
+  const client = new QueryClient();
   return (
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
-
+      <QueryClientProvider client={client}>
+        <SongPlayer playlistId='42HZjTRhG1eXWu69c2KsLG' />
+      </QueryClientProvider>
       <main>
         <section className='bg-white'>
           <div className='layout flex min-h-screen flex-col items-center justify-center text-center'>
