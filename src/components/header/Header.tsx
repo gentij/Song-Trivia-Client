@@ -1,6 +1,7 @@
-import IconButton from '@/components/buttons/IconButton';
 import React from 'react';
 import { FaUser } from 'react-icons/fa';
+
+import IconButton from '@/components/buttons/IconButton';
 
 export const Header = () => {
   return (

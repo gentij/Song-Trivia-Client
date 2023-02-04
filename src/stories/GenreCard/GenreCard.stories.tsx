@@ -5,7 +5,7 @@ import GenreCard from '@/components/GenreCard/GenreCard';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Genre Card',
+  title: 'Cards',
   component: GenreCard,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {

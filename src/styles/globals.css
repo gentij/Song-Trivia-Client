@@ -149,6 +149,24 @@
 .body-background {
   background-color: #aa3b6c;
   opacity: 1;
-  background: radial-gradient(circle, transparent 20%, #aa3b6c 20%, #aa3b6c 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #aa3b6c 20%, #aa3b6c 80%, transparent 80%, transparent) 100px 100px, linear-gradient(#7b003d 8px, transparent 8px) 0 -4px, linear-gradient(90deg, #7b003d 8px, #aa3b6c 8px) -4px 0;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      #aa3b6c 20%,
+      #aa3b6c 80%,
+      transparent 80%,
+      transparent
+    ),
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #aa3b6c 20%,
+        #aa3b6c 80%,
+        transparent 80%,
+        transparent
+      )
+      100px 100px,
+    linear-gradient(#7b003d 8px, transparent 8px) 0 -4px,
+    linear-gradient(90deg, #7b003d 8px, #aa3b6c 8px) -4px 0;
   background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
 }
