@@ -1,8 +1,28 @@
-import React from 'react';
+import { useRouter } from 'next/router';
+import React, { useEffect } from 'react';
 
 import Button from '@/components/buttons/Button';
 
+import { useSocket } from '@/SocketConnection';
+
 export const CreateJoinRoom = () => {
+  const socket = useSocket();
+  const router = useRouter();
+
+  const createRoom = () => {
+    socket?.emit('createRoom');
+  };
+
+  useEffect(() => {
+    socket?.on('getRoomId', (roomId: string) => {
+      router.push(`/room/${roomId}`);
+    });
+
+    return () => {
+      socket?.off('getRoomLink');
+    };
+  }, [socket, router]);
+
   return (
     <div className='max-w-[800px] text-center text-white'>
       <h2 className='text-6xl'>Who's the best?</h2>
@@ -11,8 +31,10 @@ export const CreateJoinRoom = () => {
         and challenge them to guess the songs or artists!
       </h4>
       <div>
-        <Button>Create Room</Button>
-        <input type='text' placeholder='create room' />
+        <Button onClick={createRoom}>Create Room</Button>
+
+        {/* ---- i don't see why we'd use this - deivid ----
+        <input type='text' placeholder='create room' /> */}
       </div>
     </div>
   );
