@@ -1,43 +1,23 @@
 import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
-import { useSocket } from '@/SocketConnection';
+import { useSocket } from '@/context/useSocket';
 
 const JOIN_ROOM_URL = 'http://localhost:3000/room/';
 
-interface Player {
-  id: string;
-  name: string;
-  avatar: string;
-  points: number;
-}
-
-interface Room {
-  id: string;
-  creator: string;
-  playlist: string | null;
-  totalRounds: number;
-  currentRound: number;
-  players: Player[];
-}
-
 const Room: React.FC = () => {
-  const socket = useSocket();
+  const { socket, room, emittingEvents } = useSocket();
   const router = useRouter();
   const { id: roomId } = router.query;
 
-  const [players, setPlayers] = useState<Player[]>([]);
-
   useEffect(() => {
-    socket?.emit('joinRoom', { roomId });
+    if (socket) {
+      emittingEvents.joinRoom(socket!, roomId as string);
 
-    socket?.on('userJoined', ({ room }: { room: Room }) => {
-      setPlayers(room.players);
-    });
-
-    return () => {
-      socket?.off('userJoined');
-    };
+      return () => {
+        socket?.off('userJoined');
+      };
+    }
   }, [socket, roomId]);
 
   return (
@@ -55,7 +35,7 @@ const Room: React.FC = () => {
       <div className='flex flex-col gap-2 text-xl'>
         <span className='text-center'>Players</span>
 
-        {players.map((player: Player) => (
+        {room?.players.map((player) => (
           <span key={player.id}>Player: {player.id}</span>
         ))}
       </div>
