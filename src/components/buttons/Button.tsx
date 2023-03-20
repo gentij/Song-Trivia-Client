@@ -6,6 +6,7 @@ import clsxm from '@/lib/clsxm';
 
 enum ButtonVariant {
   'primary',
+  'secondary',
   'outline',
   'ghost',
   'light',
@@ -54,24 +55,29 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type='button'
         disabled={disabled}
         className={clsxm(
-          'inline-flex items-center rounded font-medium',
+          'inline-flex items-center rounded-xl font-medium',
           'focus:outline-none focus-visible:ring focus-visible:ring-maroon-500',
-          'shadow-sm',
+          'shadow-custom',
           'transition-colors duration-75',
           //#region  //*=========== Size ===========
           [
-            size === 'base' && ['px-3 py-1.5', 'text-sm md:text-base'],
-            size === 'sm' && ['px-2 py-1', 'text-xs md:text-sm'],
+            size === 'base' && ['px-6 py-5', 'text-xl md:text-4xl'],
+            size === 'sm' && ['px-3 py-2', 'text-lg md:text-xl'],
           ],
           //#endregion  //*======== Size ===========
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
-              'bg-maroon-700 text-white',
-              'border border-primary-600',
-              'hover:bg-maroon-800 hover:text-white',
-              'active:bg-primary-800',
-              'disabled:bg-primary-800',
+              'bg-maroon-700 text-buttercup-500',
+              'hover:bg-maroon-800',
+              'active:bg-maroon-900',
+              'disabled:bg-maroon-700',
+            ],
+            variant === 'secondary' && [
+              'bg-buttercup-500 text-maroon-700',
+              'hover:bg-buttercup-400',
+              'active:bg-buttercup-600',
+              'disabled:bg-buttercup-500',
             ],
             variant === 'outline' && [
               'text-maroon-700',
@@ -112,7 +118,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             className={clsxm(
               'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
               {
-                'text-white': ['primary', 'dark'].includes(variant),
+                'text-buttercup-500': ['primary'].includes(variant),
+                'text-maroon-700': ['secondary'].includes(variant),
+                'text-white': ['dark'].includes(variant),
                 'text-black': ['light'].includes(variant),
                 'text-primary-500': ['outline', 'ghost'].includes(variant),
               }
