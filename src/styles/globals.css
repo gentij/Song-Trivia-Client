@@ -57,7 +57,7 @@
   /* inter var - latin */
   @font-face {
     font-family: 'Kanit', sans-serif;
-        font-style: normal;
+    font-style: normal;
     font-weight: 100 900;
     font-display: optional;
     src: url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
@@ -147,30 +147,29 @@
 }
 
 .body-background {
-  background-color: #aa3b6c;
-  opacity: 1;
-  background: radial-gradient(
-      circle,
-      transparent 20%,
-      #aa3b6c 20%,
-      #aa3b6c 80%,
-      transparent 80%,
-      transparent
-    ),
-    radial-gradient(
-        circle,
-        transparent 20%,
-        #aa3b6c 20%,
-        #aa3b6c 80%,
-        transparent 80%,
-        transparent
-      )
-      100px 100px,
-    linear-gradient(#7b003d 8px, transparent 8px) 0 -4px,
-    linear-gradient(90deg, #7b003d 8px, #aa3b6c 8px) -4px 0;
-  background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
+  @apply background-gradient;
 }
 
 .shadow-custom {
   box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.background-gradient {
+  background: rgb(176, 30, 104);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(176, 30, 104, 1) 0%,
+    rgba(220, 53, 53, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(176, 30, 104, 1) 0%,
+    rgba(220, 53, 53, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(176, 30, 104, 1) 0%,
+    rgba(220, 53, 53, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b01e68",endColorstr="#dc3535",GradientType=1);
 }
