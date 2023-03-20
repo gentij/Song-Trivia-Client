@@ -5,7 +5,7 @@ import IconButton from '@/components/buttons/IconButton';
 
 export const Header = () => {
   return (
-    <header className='w-100vw h-fit rounded-bl-3xl rounded-br-3xl bg-primary-900'>
+    <header className='w-100vw h-fit rounded-bl-3xl rounded-br-3xl bg-maroon-700'>
       <div className='container mx-auto flex h-24 items-center justify-between px-4 py-2'>
         <h1 className='h-full -rotate-90 text-right text-2xl leading-5 text-white'>
           guess <br /> the <br /> song

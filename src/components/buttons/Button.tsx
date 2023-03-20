@@ -55,7 +55,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled}
         className={clsxm(
           'inline-flex items-center rounded font-medium',
-          'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
+          'focus:outline-none focus-visible:ring focus-visible:ring-maroon-500',
           'shadow-sm',
           'transition-colors duration-75',
           //#region  //*=========== Size ===========
@@ -67,23 +67,23 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
-              'bg-primary-500 text-white',
+              'bg-maroon-700 text-white',
               'border border-primary-600',
-              'hover:bg-primary-600 hover:text-white',
-              'active:bg-primary-700',
-              'disabled:bg-primary-700',
+              'hover:bg-maroon-800 hover:text-white',
+              'active:bg-primary-800',
+              'disabled:bg-primary-800',
             ],
             variant === 'outline' && [
-              'text-primary-500',
-              'border border-primary-500',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
+              'text-maroon-700',
+              'border border-maroon-700',
+              'hover:bg-maroon-50 active:bg-maroon-100 disabled:bg-maroon-100',
               isDarkBg &&
                 'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
             ],
             variant === 'ghost' && [
-              'text-primary-500',
+              'text-maroon-700',
               'shadow-none',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
+              'hover:bg-maroon-50 active:bg-maroon-100 disabled:bg-maroon-100',
               isDarkBg &&
                 'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
             ],
