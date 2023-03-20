@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
 
 :root {
   /* #region  /**=========== Primary Color =========== */
@@ -56,11 +56,11 @@
 @layer base {
   /* inter var - latin */
   @font-face {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
+    font-family: 'Kanit', sans-serif;
+        font-style: normal;
     font-weight: 100 900;
     font-display: optional;
-    src: url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+    src: url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
       U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
       U+2215, U+FEFF, U+FFFD;
@@ -169,4 +169,8 @@
     linear-gradient(#7b003d 8px, transparent 8px) 0 -4px,
     linear-gradient(90deg, #7b003d 8px, #aa3b6c 8px) -4px 0;
   background-size: 200px 200px, 200px 200px, 100px 100px, 100px 100px;
+}
+
+.shadow-custom {
+  box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
