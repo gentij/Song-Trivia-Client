@@ -6,6 +6,7 @@ import clsxm from '@/lib/clsxm';
 
 enum IconButtonVariant {
   'primary',
+  'secondary',
   'outline',
   'ghost',
   'light',
@@ -44,17 +45,22 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
         className={clsxm(
           'inline-flex items-center justify-center rounded font-medium',
           'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
-          'shadow-sm',
+          'shadow-custom',
           'transition-colors duration-75',
           'min-h-[28px] min-w-[28px] p-1 md:min-h-[34px] md:min-w-[34px] md:p-2',
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
-              'bg-primary-500 text-white',
-              'border border-primary-600',
+              'bg-primary-500 text-buttercup-500',
               'hover:bg-primary-600 hover:text-white',
               'active:bg-primary-700',
               'disabled:bg-primary-700',
+            ],
+            variant === 'secondary' && [
+              'bg-buttercup-500 text-maroon-700',
+              'hover:bg-buttercup-400',
+              'active:bg-buttercup-600',
+              'disabled:bg-buttercup-500',
             ],
             variant === 'outline' && [
               'text-primary-500',
