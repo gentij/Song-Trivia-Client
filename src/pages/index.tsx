@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { BsFillPlayFill } from 'react-icons/bs';
 
 import { CreateJoinRoom } from '@/components/CreateJoinRoom/CreateJoinRoom';
 import { Header } from '@/components/header/Header';
@@ -24,7 +25,19 @@ export default function HomePage() {
       <Seo />
       <Header />
       <main className='min-h-main flex items-center justify-center'>
-        <CreateJoinRoom />
+        <div className='text-center text-buttercup-500'>
+          <h1 className='text-4xl'>
+            Challenge your friends in a <br />
+            guess-the-song <br />
+            competition
+          </h1>
+          <h4 className='my-4 text-xl font-light opacity-70'>
+            Start a game and invite your friends or play <br />
+            with strangers
+          </h4>
+          <BsFillPlayFill className='my-2 mx-auto text-9xl text-mustard-300' />
+          <h2 className='text-2xl text-mustard-300'>play now</h2>
+        </div>
       </main>
     </Layout>
   );
