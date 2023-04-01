@@ -18,8 +18,6 @@ const SocketProvider: React.FC<SocketProviderProps> = ({ children }) => {
     }) as Socket;
 
     socket.on('connect', () => {
-      console.log('hello');
-
       setSocketConnection(socket);
     });
 

@@ -52,7 +52,7 @@ const SocketProvider: React.FC<SocketProviderProps> = ({ children }) => {
         )
       );
     }
-  }, [socketConnection]);
+  });
 
   return (
     <SocketContext.Provider value={context}>{children}</SocketContext.Provider>

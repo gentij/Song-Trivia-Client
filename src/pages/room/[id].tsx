@@ -13,8 +13,7 @@ const Room: React.FC = () => {
   useEffect(() => {
     if (socket) {
       // Dont emit joinRoom if room was just created
-      if (room === null || socket.id !== room?.creator)
-        emittingEvents.joinRoom(socket!, roomId as string);
+      if (room === null) emittingEvents.joinRoom(socket!, roomId as string);
 
       return () => {
         socket?.off('userJoined');
@@ -23,7 +22,7 @@ const Room: React.FC = () => {
   }, [socket, roomId, emittingEvents, room]);
 
   return (
-    <div className='mt-24 flex flex-col items-center justify-center'>
+    <div className='mt-24 flex flex-col items-center justify-center text-white'>
       <div className='flex flex-row gap-5'>
         <span className='text-3xl font-black'>room: </span>
         <span className='text-3xl font-medium'>{roomId}</span>
