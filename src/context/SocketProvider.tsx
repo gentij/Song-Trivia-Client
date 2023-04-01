@@ -16,17 +16,6 @@ interface SocketProviderProps {
   children: React.ReactNode;
 }
 
-const joinedRoom = (
-  socket: Socket,
-  setRoom: React.Dispatch<React.SetStateAction<undefined>>
-) => {
-  socket.on('userJoined', ({ message, room }) => {
-    console.log('message ', message);
-    console.log('room ', room);
-    setRoom(room);
-  });
-};
-
 const SocketProvider: React.FC<SocketProviderProps> = ({ children }) => {
   const router = useRouter();
   const [room, setRoom] = useState<Room | null>(null);

@@ -12,13 +12,15 @@ const Room: React.FC = () => {
 
   useEffect(() => {
     if (socket) {
-      emittingEvents.joinRoom(socket!, roomId as string);
+      // Dont emit joinRoom if room was just created
+      if (room === null || socket.id !== room?.creator)
+        emittingEvents.joinRoom(socket!, roomId as string);
 
       return () => {
         socket?.off('userJoined');
       };
     }
-  }, [socket, roomId]);
+  }, [socket, roomId, emittingEvents, room]);
 
   return (
     <div className='mt-24 flex flex-col items-center justify-center'>
