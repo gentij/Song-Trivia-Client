@@ -44,13 +44,14 @@ const SocketProvider: React.FC<SocketProviderProps> = ({ children }) => {
 
   useEffect(() => {
     if (socketConnection) {
-      Object.keys(listeningEvents).forEach((event) =>
+      Object.keys(listeningEvents).forEach((event) => {
+        console.log(event);
         listeningEvents[event as LISTENING_EVENTS_ENUM].call(
           this,
           context,
           router
-        )
-      );
+        );
+      });
     }
   });
 

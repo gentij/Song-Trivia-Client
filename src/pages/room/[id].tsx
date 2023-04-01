@@ -14,10 +14,6 @@ const Room: React.FC = () => {
     if (socket) {
       // Dont emit joinRoom if room was just created
       if (room === null) emittingEvents.joinRoom(socket!, roomId as string);
-
-      return () => {
-        socket?.off('userJoined');
-      };
     }
   }, [socket, roomId, emittingEvents, room]);
 
