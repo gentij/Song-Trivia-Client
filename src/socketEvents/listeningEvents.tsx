@@ -1,5 +1,6 @@
-import { SocketContextType } from '@/context/SocketContext';
 import { NextRouter } from 'next/router';
+
+import { SocketContextType } from '@/context/SocketContext';
 
 export type LISTENING_EVENTS_ENUM = 'userJoined';
 

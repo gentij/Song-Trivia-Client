@@ -1,7 +1,8 @@
-import { Room } from '@/interfaces/room';
-import { emittingEvents } from '@/socketEvents/emittingEvents';
 import { createContext } from 'react';
 import { Socket } from 'socket.io-client';
+
+import { Room } from '@/interfaces/room';
+import { emittingEvents } from '@/socketEvents/emittingEvents';
 
 export interface SocketContextType {
   socket: Socket | null;

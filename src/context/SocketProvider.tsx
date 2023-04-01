@@ -1,13 +1,14 @@
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
+import io, { Socket } from 'socket.io-client';
+
 import { SocketContext, SocketContextType } from '@/context/SocketContext';
 import { Room } from '@/interfaces/room';
 import { emittingEvents } from '@/socketEvents/emittingEvents';
 import {
-  listeningEvents,
   LISTENING_EVENTS_ENUM,
+  listeningEvents,
 } from '@/socketEvents/listeningEvents';
-import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
-import io, { Socket } from 'socket.io-client';
 
 const SOCKET_SERVER_URL = 'http://localhost:4000';
 
